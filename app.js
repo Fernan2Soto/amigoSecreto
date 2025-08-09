@@ -56,10 +56,13 @@ function sortearAmigo() {
     // console.log('Resultados del sorteo:', participants);
     const lista = document.getElementById('listaAmigos');
     // Limpiar la lista antes de mostrar los resultados
-    lista.innerHTML = '';
+    lista.innerHTML =  `${participants[0].nombre} has click en "Ver Amigo" para ver tu amigo secreto.`;
+    
+    document.getElementById('btnAmigo').style.display = 'none';
     document.getElementById('btnSortear').style.display = 'none';
     document.getElementById('btnVerAmigo').style.display = 'block';
     document.getElementById('btnReiniciar').style.display = 'block';
+  
 }
 
 function VerAmigo() {
@@ -108,6 +111,7 @@ function reiniciarJuego() {
     lista.innerHTML = '';
     
     // Reiniciar los botones
+    document.getElementById('btnAmigo').style.display = 'block';
     document.getElementById('btnSortear').style.display = 'block';
     document.getElementById('btnVerAmigo').style.display = 'none';
     document.getElementById('btnReiniciar').style.display = 'none';
